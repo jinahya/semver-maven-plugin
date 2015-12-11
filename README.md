@@ -11,6 +11,15 @@ Add this plugin.
 <plugin>
   <groupId>com.github.jinahya</groupId>
   <artifactId>semver-maven-plugin</artifactId>
+  <executions>
+    <execution>
+      <id>semver-check</id>
+      <phase>verify</phase>
+      <goals>
+        <goal>check</goal>
+      </goals>
+    </execution>
+  </executions>
 </plugin>
 ```
 ## constraints
