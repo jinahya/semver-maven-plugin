@@ -14,22 +14,25 @@ Add this plugin.
 </plugin>
 ```
 ## constraints
-## level 1: entire version string
+### level 1: entire version string
 The entire version string(`@{project.version}`) is checked for pattern matching with follwing expression.
 ```
 (\d+)\.(\d+)\.(\d+)(-([^\+]*))?(\+(.+))?
 -----  -----  -----  ---------    -----
 X     .Y     .Z     -R           +M
 ```
-## level 2
-### Normal versions
+### level 2
+
+#### Normal versions
 Each normal versions(`X`, `Y`, and `Z`) checked by following constraints
  * Must be non-negative integers.
  * Must not contain leading zeros. Note that [single `0` is valid](https://github.com/mojombo/semver/issues/185).
-### Pre-release version
+
+#### Pre-release version
  * Each dot separated identifiers must match `[0-9A-Za-z-]+`.
  * When there are only numeric characters, no leading zeros are allowed.
-### Build metadata
+
+#### Build metadata
  * Each dot separated identifiers must match `[0-9A-Za-z-]+`.
  * Leading zeros are allowed even if there are only numeric characters.
 <hr/>
